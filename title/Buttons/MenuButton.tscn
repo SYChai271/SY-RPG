@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://1ufp8njljyrr"]
+
+[ext_resource type="FontFile" uid="uid://bf8t4r4bm4gkp" path="res://title/Montserrat-ExtraBold.ttf" id="1"]
+[ext_resource type="Script" path="res://title/Buttons/MenuButton.gd" id="2"]
+
+[node name="MenuButton" type="Button"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -160.0
+flat = true
+script = ExtResource("2")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_colors/font_shadow_color = Color(0, 0.882353, 1, 1)
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("1")
+text = "Label"

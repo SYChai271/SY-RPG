@@ -1,0 +1,88 @@
+[gd_scene load_steps=9 format=3 uid="uid://sklv5s75akjx"]
+
+[ext_resource type="Texture2D" uid="uid://dk0xpta0f1ili" path="res://title/logo.png" id="1"]
+[ext_resource type="PackedScene" uid="uid://c2wtpmt5nomkl" path="res://title/Buttons/NewGameButton.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://bgunt78s0jd43" path="res://title/Buttons/ContinueButton.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://fomptx8eqamb" path="res://title/Buttons/OptionButton.tscn" id="4"]
+[ext_resource type="Texture2D" uid="uid://bdet32mhe3ca4" path="res://title/player.png" id="5"]
+[ext_resource type="PackedScene" path="res://effects/FadeIn.tscn" id="6"]
+[ext_resource type="Script" path="res://title/Buttons/MenuButton.gd" id="7"]
+[ext_resource type="Script" path="res://title/Title.gd" id="8"]
+
+[node name="Title" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("8")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0470588, 0.0627451, 0.0941176, 1)
+
+[node name="Menu" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 20.0
+offset_right = 290.0
+offset_bottom = 151.0
+scale = Vector2(0.4, 0.4)
+
+[node name="Logo" type="TextureRect" parent="Menu"]
+layout_mode = 2
+texture = ExtResource("1")
+stretch_mode = 4
+
+[node name="Options" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 72.0
+offset_right = 290.0
+offset_bottom = 160.0
+
+[node name="CentreRow" type="HBoxContainer" parent="Options"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Buttons" type="VBoxContainer" parent="Options/CentreRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="NewGameButton" parent="Options/CentreRow/Buttons" instance=ExtResource("2")]
+layout_mode = 2
+scene_to_load = "res://World.tscn"
+
+[node name="ContinueButton" parent="Options/CentreRow/Buttons" instance=ExtResource("3")]
+layout_mode = 2
+script = ExtResource("7")
+
+[node name="OptionButton" parent="Options/CentreRow/Buttons" instance=ExtResource("4")]
+texture_filter = 1
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="Options/CentreRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Characters" type="TextureRect" parent="Options/CentreRow/CenterContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("5")
+
+[node name="FadeIn" parent="." instance=ExtResource("6")]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+grow_horizontal = 2
+grow_vertical = 2

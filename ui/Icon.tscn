@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://btvh8wdmewflu"]
+
+[ext_resource type="Texture2D" uid="uid://bhiwlpgnlfye8" path="res://ui/Profile.png" id="1"]
+
+[node name="Icon" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+scale = Vector2(0.6, 0.6)
+
+[node name="Profile" type="TextureRect" parent="."]
+texture_filter = 1
+offset_right = 46.0
+offset_bottom = 46.0
+texture = ExtResource("1")

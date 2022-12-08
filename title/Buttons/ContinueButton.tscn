@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgunt78s0jd43"]
+
+[ext_resource type="PackedScene" uid="uid://1ufp8njljyrr" path="res://title/Buttons/MenuButton.tscn" id="1"]
+
+[node name="ContinueButton" instance=ExtResource("1")]
+grow_horizontal = 2
+grow_vertical = 2
+script = null
+
+[node name="Label" parent="." index="0"]
+layout_mode = 3
+grow_horizontal = 2
+grow_vertical = 2
+text = "Continue"
