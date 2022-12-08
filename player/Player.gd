@@ -10,6 +10,7 @@ enum {
 }
 
 var state = MOVE
+var starting_direction = Vector2(1, 0)
 
 @onready var animationPlayer = $AnimationPlayer
 @onready var animationTree = $AnimationTree
@@ -18,6 +19,7 @@ var state = MOVE
 
 func _ready():
 	animationTree.active = true
+	animationTree.set("parameters/Idle/blend_position", starting_direction)
 
 
 func _physics_process(delta):

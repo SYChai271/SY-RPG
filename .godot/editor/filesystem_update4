@@ -1,3 +1,5 @@
-res://title/Buttons/MenuButton.gd
-res://title/Title.gd
+res://player/Player.tscn
+res://title/Title.tscn
+res://World.tscn
+res://ui/Icon.tscn
 res://player/Player.gd
