@@ -1,5 +1,1 @@
-res://player/Player.tscn
-res://title/Title.tscn
-res://World.tscn
-res://ui/Icon.tscn
 res://player/Player.gd
