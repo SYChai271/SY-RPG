@@ -46,9 +46,7 @@ func move_state(delta):
 		animationState.travel("Idle")
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 		
-	set_velocity(velocity)
 	move_and_slide()
-	velocity = velocity
 	
 	if Input.is_action_just_pressed("attack"):
 		state = ATTACK
