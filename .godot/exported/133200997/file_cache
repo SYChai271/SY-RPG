@@ -1,0 +1,11 @@
+res://effects/FadeIn.tscn::fa2a66eccb6d405c3b37879c9f73140d::1670423027::res://.godot/exported/133200997/export-7604a69a2b5dc3bb33d589fed2353755-FadeIn.scn
+res://player/Player.tscn::ed0915c4536c1bfd9e56796498bc146c::1670493722::res://.godot/exported/133200997/export-23464e90032b607cf55b5bbb7efcb113-Player.scn
+res://title/Buttons/ContinueButton.tscn::6d302301b08c662eeeac747781957464::1670429985::res://.godot/exported/133200997/export-99392b0e54221ebf091a53ae08ecd282-ContinueButton.scn
+res://title/Buttons/MenuButton.tscn::05f90e10ebbc69f34143a378fae2474b::1670429985::res://.godot/exported/133200997/export-d9fb4774bffc60da0341078fbea7ef5c-MenuButton.scn
+res://title/Buttons/NewGameButton.tscn::b99e12aeee5673e44a36ba06efae94b1::1670429985::res://.godot/exported/133200997/export-47abd88c517d930aaf995320f7f04a16-NewGameButton.scn
+res://title/Buttons/OptionButton.tscn::d749b7d98bf326daa655630d0e4c834d::1670429985::res://.godot/exported/133200997/export-96ae6fc90cca4c99d6b105e4203c4119-OptionButton.scn
+res://title/Title.tscn::8f18e72535278306a7bc7ba0c89267a9::1670493722::res://.godot/exported/133200997/export-cf57153911506f6af2757c07df02dec2-Title.scn
+res://ui/Icon.tscn::df9e47d38a35cc58eb155b1fadf55c0f::1670493722::res://.godot/exported/133200997/export-a473f29680cf35abbcfe67287e4e62cf-Icon.scn
+res://World/Bush.tscn::c713bfe829237ffef9da00a95d6aec67::1670423027::res://.godot/exported/133200997/export-5122e6aec51f6cc110efdb2db785e85f-Bush.scn
+res://default_env.tres::a52129f071fffbd20a6013a6c0edec1e::1670423027::res://.godot/exported/133200997/export-7cf3fd67ad9f55210191d77b582b8209-default_env.res
+res://World.tscn::f823b2e47d0b91d22599e17c355ea22d::1670493722::res://.godot/exported/133200997/export-73d50b7f59085c9a9ce28353ee849bb1-World.scn
