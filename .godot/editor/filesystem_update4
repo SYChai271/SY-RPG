@@ -1,4 +1,3 @@
-res://player/Player.gd
 res://title/Title.tscn
 res://World.tscn
 res://ui/Icon.tscn

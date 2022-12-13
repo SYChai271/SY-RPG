@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-const ACCELERATION = 500
-const MAX_SPEED = 80
-const FRICTION = 500
+@export var MAX_SPEED: int
+@export var ACCELERATION: int
+@export var FRICTION: int
 
 enum {
 	MOVE,
@@ -43,8 +43,8 @@ func move_state(delta):
 		animationState.travel("Run")
 		velocity = velocity.move_toward(direction_input * MAX_SPEED, ACCELERATION * delta)
 	else:
-		animationState.travel("Idle")
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
+		animationState.travel("Idle")
 		
 	move_and_slide()
 	
