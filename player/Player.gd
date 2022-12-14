@@ -15,6 +15,7 @@ var starting_direction = Vector2(1, 0)
 @onready var animationPlayer = $AnimationPlayer
 @onready var animationTree = $AnimationTree
 @onready var animationState = animationTree.get("parameters/playback")
+@onready var joystick = get_node("Controls")
 
 
 func _ready():
@@ -32,10 +33,8 @@ func _physics_process(delta):
 
 func move_state(delta):
 	var direction_input = Vector2.ZERO
-	direction_input.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
-	direction_input.y = Input.get_action_strength("ui_down") - Input.get_action_raw_strength("ui_up")
-	direction_input = direction_input.normalized()
-	
+	direction_input = joystick.get_value()
+
 	if direction_input != Vector2.ZERO:
 		animationTree.set("parameters/Idle/blend_position", direction_input)
 		animationTree.set("parameters/Run/blend_position", direction_input)
@@ -59,3 +58,4 @@ func attack_state(delta):
 	
 func attack_animation_finished():
 	state = MOVE
+
