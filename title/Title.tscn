@@ -59,37 +59,22 @@ theme_override_constants/separation = 15
 alignment = 1
 
 [node name="NewGameButton" parent="Options/CentreRow/Buttons" instance=ExtResource("2")]
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
 offset_top = 17.0
 offset_right = 128.0
 offset_bottom = 25.0
-grow_horizontal = 1
-grow_vertical = 1
 scene_to_load = "res://World.tscn"
 
 [node name="ContinueButton" parent="Options/CentreRow/Buttons" instance=ExtResource("3")]
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
 offset_top = 40.0
 offset_right = 128.0
 offset_bottom = 48.0
-grow_horizontal = 1
-grow_vertical = 1
 script = ExtResource("7")
 
 [node name="OptionButton" parent="Options/CentreRow/Buttons" instance=ExtResource("4")]
 texture_filter = 1
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
 offset_top = 63.0
 offset_right = 128.0
 offset_bottom = 71.0
-grow_horizontal = 1
-grow_vertical = 1
 
 [node name="CenterContainer" type="CenterContainer" parent="Options/CentreRow"]
 offset_left = 132.0

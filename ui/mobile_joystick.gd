@@ -14,7 +14,7 @@ func _input(event):
 			ongoing_drag = event.get_index()
 	if event is InputEventScreenTouch and not event.pressed and event.get_index() == ongoing_drag:
 		joystick_active = false
-		$Sprite2D.position = Vector2(50, 124)
+		$Sprite2D.position = Vector2(48, 137)
 		ongoing_drag = -1
 			
 func calculate_move_vector(event_position):

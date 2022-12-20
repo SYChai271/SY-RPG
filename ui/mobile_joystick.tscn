@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bpbg37udsbdpr"]
+[gd_scene load_steps=7 format=3 uid="uid://bpbg37udsbdpr"]
 
 [ext_resource type="Script" path="res://ui/mobile_joystick.gd" id="1_c56va"]
 [ext_resource type="Texture2D" uid="uid://drrvtxdgnj0rl" path="res://ui/Joystick.png" id="2_h763d"]
@@ -7,6 +7,9 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wo7nt"]
 radius = 136.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2dl1u"]
+radius = 15.0
 
 [node name="Controls" type="CanvasLayer"]
 script = ExtResource("1_c56va")
@@ -32,4 +35,5 @@ metadata/_edit_group_ = true
 position = Vector2(-26.6667, -26.6667)
 scale = Vector2(3.33333, 3.33333)
 texture_normal = ExtResource("4_do1ps")
+shape = SubResource("CircleShape2D_2dl1u")
 action = "attack"

@@ -1,6 +1,6 @@
-res://player/Player.tscn
-res://World.tscn
 res://title/Title.tscn
+res://World.tscn
+res://player/Player.tscn
 res://ui/Icon.tscn
 res://ui/mobile_joystick.tscn
-res://player/Player.gd
+res://title/Buttons/MenuButton.tscn
