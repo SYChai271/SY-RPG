@@ -25,6 +25,7 @@ window/stretch/mode="canvas_items"
 
 [editor]
 
+export/convert_text_resources_to_binary=true
 version_control_autoload_on_startup=true
 version_control_plugin_name="GitAPI"
 

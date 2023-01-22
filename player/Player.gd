@@ -5,11 +5,12 @@ extends CharacterBody2D
 @export var FRICTION: int
 
 enum {
-	MOVE,
+	IDLE,
+	RUN,
 	ATTACK
 }
 
-var state = MOVE
+var state = IDLE
 var starting_direction = Vector2(1, 0)
 
 @onready var animationPlayer = $AnimationPlayer
@@ -25,13 +26,25 @@ func _ready():
 
 func _physics_process(delta):
 	match state:
-		MOVE:
-			move_state(delta)
+		IDLE:
+			idle_state(delta)
+		RUN:
+			run_state(delta)
 		ATTACK:
 			attack_state(delta)
 
+func idle_state(delta):
+	var direction_input = Vector2.ZERO
+	direction_input = joystick.get_value()
+	velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
+	if direction_input != Vector2.ZERO:
+		state = RUN
+	if Input.is_action_just_pressed("attack"):
+		state = ATTACK
+	if animationState.get_current_node() != "Idle":
+		animationState.travel("Idle")
 
-func move_state(delta):
+func run_state(delta):
 	var direction_input = Vector2.ZERO
 	direction_input = joystick.get_value()
 
@@ -39,11 +52,11 @@ func move_state(delta):
 		animationTree.set("parameters/Idle/blend_position", direction_input)
 		animationTree.set("parameters/Run/blend_position", direction_input)
 		animationTree.set("parameters/Attack/blend_position", direction_input)
-		animationState.travel("Run")
+		if animationState.get_current_node() != "Run":
+			animationState.travel("Run")
 		velocity = velocity.move_toward(direction_input * MAX_SPEED, ACCELERATION * delta)
 	else:
-		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
-		animationState.travel("Idle")
+		state = IDLE
 		
 	move_and_slide()
 	
@@ -53,9 +66,10 @@ func move_state(delta):
 
 func attack_state(delta):
 	velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
-	animationState.travel("Attack")
+	if animationState.get_current_node() != "Attack":
+		animationState.travel("Attack")
 	
 	
 func attack_animation_finished():
-	state = MOVE
+	state = IDLE
 

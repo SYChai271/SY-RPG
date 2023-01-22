@@ -7,6 +7,7 @@ layout_mode = 3
 anchors_preset = 0
 
 [node name="Profile" type="TextureRect" parent="."]
-offset_right = 46.0
-offset_bottom = 46.0
+layout_mode = 0
+offset_right = 34.0
+offset_bottom = 34.0
 texture = ExtResource("1")

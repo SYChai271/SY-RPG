@@ -1,6 +1,9 @@
 res://title/Title.tscn
-res://World.tscn
+res://City.tscn
 res://player/Player.tscn
 res://ui/Icon.tscn
 res://ui/mobile_joystick.tscn
 res://title/Buttons/MenuButton.tscn
+res://title/Buttons/NewGameButton.tscn
+res://title/Buttons/ContinueButton.tscn
+res://title/Buttons/OptionButton.tscn
