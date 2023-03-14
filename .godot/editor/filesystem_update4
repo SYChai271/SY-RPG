@@ -1,9 +1,8 @@
+res://player/Player.gd
+res://ui/mobile_joystick.gd
 res://title/Title.tscn
 res://City.tscn
 res://player/Player.tscn
 res://ui/Icon.tscn
-res://ui/mobile_joystick.tscn
-res://title/Buttons/MenuButton.tscn
-res://title/Buttons/NewGameButton.tscn
-res://title/Buttons/ContinueButton.tscn
-res://title/Buttons/OptionButton.tscn
+res://title/Buttons/MenuButton.gd
+res://title/Title.gd

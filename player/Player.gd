@@ -4,11 +4,7 @@ extends CharacterBody2D
 @export var ACCELERATION: int
 @export var FRICTION: int
 
-enum {
-	IDLE,
-	RUN,
-	ATTACK
-}
+enum { IDLE, RUN, ATTACK }
 
 var state = IDLE
 var starting_direction = Vector2(1, 0)
@@ -33,6 +29,7 @@ func _physics_process(delta):
 		ATTACK:
 			attack_state(delta)
 
+
 func idle_state(delta):
 	var direction_input = Vector2.ZERO
 	direction_input = joystick.get_value()
@@ -43,6 +40,7 @@ func idle_state(delta):
 		state = ATTACK
 	if animationState.get_current_node() != "Idle":
 		animationState.travel("Idle")
+
 
 func run_state(delta):
 	var direction_input = Vector2.ZERO
@@ -57,9 +55,9 @@ func run_state(delta):
 		velocity = velocity.move_toward(direction_input * MAX_SPEED, ACCELERATION * delta)
 	else:
 		state = IDLE
-		
+
 	move_and_slide()
-	
+
 	if Input.is_action_just_pressed("attack"):
 		state = ATTACK
 
@@ -68,8 +66,7 @@ func attack_state(delta):
 	velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 	if animationState.get_current_node() != "Attack":
 		animationState.travel("Attack")
-	
-	
+
+
 func attack_animation_finished():
 	state = IDLE
-

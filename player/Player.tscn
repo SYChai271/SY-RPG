@@ -429,7 +429,6 @@ parameters/Run/blend_position = Vector2(0, 0)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 visible = false
-current = true
 position_smoothing_enabled = true
 
 [node name="Controls" parent="." instance=ExtResource("3_fdlbm")]
