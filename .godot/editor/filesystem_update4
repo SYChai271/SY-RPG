@@ -1,8 +1,5 @@
+res://City.tscn
+res://title/Title.tscn
+res://player/Player.tscn
 res://player/Player.gd
 res://ui/mobile_joystick.gd
-res://title/Title.tscn
-res://City.tscn
-res://player/Player.tscn
-res://ui/Icon.tscn
-res://title/Buttons/MenuButton.gd
-res://title/Title.gd
