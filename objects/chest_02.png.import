@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/chest_02.png-f7d7936cf92cd383125825e41d5d17b4
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false
