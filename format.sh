@@ -1,1 +1,0 @@
-gdformat $(find . -name '*.gd')

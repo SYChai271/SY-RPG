@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var ACCELERATION: int
 @export var FRICTION: int
 
-enum { IDLE, RUN, ATTACK }
+enum {IDLE, RUN, ATTACK}
 
 var state = IDLE
 var starting_direction = Vector2(1, 0)
@@ -14,11 +14,9 @@ var starting_direction = Vector2(1, 0)
 @onready var animationState = animationTree.get("parameters/playback")
 @onready var joystick = get_node("Controls")
 
-
 func _ready():
 	animationTree.active = true
 	animationTree.set("parameters/Idle/blend_position", starting_direction)
-
 
 func _physics_process(delta):
 	match state:
@@ -28,7 +26,6 @@ func _physics_process(delta):
 			run_state(delta)
 		ATTACK:
 			attack_state(delta)
-
 
 func idle_state(delta):
 	var direction_input = Vector2.ZERO
@@ -40,7 +37,6 @@ func idle_state(delta):
 		state = ATTACK
 	if animationState.get_current_node() != "Idle":
 		animationState.travel("Idle")
-
 
 func run_state(delta):
 	var direction_input = Vector2.ZERO
@@ -61,12 +57,10 @@ func run_state(delta):
 	if Input.is_action_just_pressed("attack"):
 		state = ATTACK
 
-
 func attack_state(delta):
 	velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 	if animationState.get_current_node() != "Attack":
 		animationState.travel("Attack")
-
 
 func attack_animation_finished():
 	state = IDLE
